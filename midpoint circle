@@ -1,0 +1,76 @@
+[11:09 PM, 10/21/2024] Viraj Bhabad (Pogo): #include <graphics.h>
+
+#include <conio.h>
+
+#include <stdio.h>
+
+#include <math.h
+
+ void midpointCircle(int xc, int yc, int r) {
+
+int x = 0;
+
+int y = r;
+
+
+int p=1-r;
+ 
+
+ void plotCirclePoints(int x, int y, int xc, int 
+yc) 
+putpixel (xc + x, yc + y,WHITE); 
+putpixel(xc-x, yc + y, WHITE);
+ putpixel(xc+x, yc - y, WHITE); 
+putpixel(xc-x, yc - y, WHITE); 
+putpixel (xc + y, yc + x, WHITE); 
+putpixel(xc-y, yc + x, WHITE); 
+putpixel(xc+ y, yc- x, WHITE);
+
+putpixel(xc-y, yc - x, WHITE);
+}
+// Initial point on the circumference
+
+plot CirclePoints(x, y, xс, ус);
+
+// Iteratively calculate the next points
+
+while (x < y) {
+
+x ++;
+
+if (p < 0){
+
+p = p + 2 * x + 1;
+[11:10 PM, 10/21/2024] Viraj Bhabad (Pogo): }else {
+Y--;
+
+p=p+2*x-2*y+1;
+
+}
+
+plotCirclePoints(x, y, xс, ус);
+}}
+
+int main() {
+
+int gd = DETECT, gm;
+
+int xc, yc, r;
+
+initgraph(&gd, &gm, "C:\\TC\\BGI");
+
+printf("Enter the center of the circle (xc, yc): ");
+
+scanf("%d %d", &xc, &yc);
+
+printf("Enter the radius of the circle (r): ");
+
+scanf("%d", &r);
+
+midpointCircle(xc, ус, г);
+
+getch();
+
+closegraph();
+
+return 0;}
